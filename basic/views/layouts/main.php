@@ -39,7 +39,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Задание 1', 'url' => ['/phone/index']],
-            ['label' => 'Задание 2', 'url' => ['#']],
+            ['label' => 'Задание 2', 'url' => ['/products/index']],
         ],
     ]);
     NavBar::end();

@@ -250,3 +250,8 @@ img {
     vertical-align: center;
     padding: 10px;
 }
+
+RootEntity {
+    display: block;
+}
+

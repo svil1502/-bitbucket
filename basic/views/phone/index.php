@@ -1,7 +1,9 @@
 <?php
 
+
 use yii\helpers\Html;
 use yii\grid\GridView;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\PhoneSearch */
@@ -9,6 +11,13 @@ use yii\grid\GridView;
 
 $this->title = 'Phones';
 $this->params['breadcrumbs'][] = $this->title;
+echo "Парсинг";
+$xmlData = simplexml_load_file('categories.xml');
+
+//в цикле создаем объекты с параметрами, и пишем в базу
+foreach($xmlData as $key => $item) {
+    echo $item->categories->item['name'];
+}
 ?>
 <div class="phone-index">
 
@@ -38,3 +47,20 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 </div>
+<?php
+
+
+$categories = simplexml_load_file('categories.xml');
+for($i=0; $i<count($categories); $i++)
+{
+    echo "{$categories->item[$i]->id} => {$categories->item[$i]->name} ";
+    echo "<br/>";
+}
+
+
+
+
+
+?>
+
+
