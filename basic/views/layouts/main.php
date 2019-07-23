@@ -40,6 +40,7 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Задание 1', 'url' => ['/phone/index']],
             ['label' => 'Задание 2', 'url' => ['/products/index']],
+            ['label' => 'Задание 2 c ArrayDataProvider', 'url' => ['/productsar/index']],
         ],
     ]);
     NavBar::end();
