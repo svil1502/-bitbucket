@@ -27,15 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-//            [
-//                'attribute' => 'name',
-//                'format' => 'ntext',
-//                'value' => function ($model) {
-//                    if ($model->name == null)
-//                        return '(не задано)';
-//
-//                },
-//            ],
+
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
