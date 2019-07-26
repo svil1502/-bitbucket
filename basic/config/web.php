@@ -11,39 +11,25 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'modules' => [
-        'yii2images' => [
-            'class' => 'rico\yii2images\Module',
-            //be sure, that permissions ok
-            //if you cant avoid permission errors you have to create "images" folder in web root manually and set 777 permissions
-            'imagesStorePath' => 'upload/store', //path to origin images
-            'imagesCachePath' => 'upload/cache', //path to resized copies
-            'graphicsLibrary' => 'GD', //but really its better to use 'Imagick'
-            'placeHolderPath' => '@webroot/upload/store/no-image.png', // if you want to get placeholder when image not exists, string will be processed by Yii::getAlias
-            'imageCompressionQuality' => 100, // Optional. Default value is 85.
-        ],
-        'admin' => [
-            'class' => 'app\modules\admin\Module',
-            'layout'=> 'admin',
-            'defaultRoute'=>'gallery/index',
-        ],
-
-    ],
 
     'components' => [
+
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '6KCPaiO_ll7csfgUeRcWIYRbdTer8xPv',
 
         ],
         'formatter' => [
+            'nullDisplay' => 'нет данных',
             'class' => 'app\components\FormatterHelper',
             'locale' => 'en-US',
             'dateFormat' => 'yyyy-MM-dd',
             'datetimeFormat' => 'yyyy-MM-dd HH:mm:ss',
             'decimalSeparator' => '.',
             'thousandSeparator' => ',',
-            'currencyCode' => 'USD'
+            'currencyCode' => 'USD',
+
+
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -77,9 +63,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '<id:([0-9])+>/images/image-by-item-and-alias' => 'yii2images/images/image-by-item-and-alias',
-                '/images/image-by-item-and-alias' => 'yii2images/images/image-by-item-and-alias',
-            ],
+               ],
         ],
 
 

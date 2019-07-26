@@ -47,20 +47,5 @@ foreach($xmlData as $key => $item) {
         ],
     ]); ?>
 </div>
-<?php
-
-
-$categories = simplexml_load_file('categories.xml');
-for($i=0; $i<count($categories); $i++)
-{
-    echo "{$categories->item[$i]->id} => {$categories->item[$i]->name} ";
-    echo "<br/>";
-}
-
-
-
-
-
-?>
 
 
