@@ -42,6 +42,7 @@ AppAsset::register($this);
             ['label' => 'Задание 2', 'url' => ['/products/index']],
             ['label' => 'Задание 2 c ArrayDataProvider', 'url' => ['/productsar/index']],
             ['label' => 'Задание 3 Виджеты', 'url' => ['/vidjet/index']],
+            ['label' => 'Задание 4 Хелперы', 'url' => ['/helper/index']],
         ],
     ]);
     NavBar::end();
