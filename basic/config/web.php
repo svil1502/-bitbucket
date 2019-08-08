@@ -1,4 +1,5 @@
 <?php
+use svil\sring\StringHelper;
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
@@ -13,7 +14,9 @@ $config = [
     ],
 
     'components' => [
-
+        'stringHelper' => [
+            'class' => StringHelper::classname(),
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '6KCPaiO_ll7csfgUeRcWIYRbdTer8xPv',

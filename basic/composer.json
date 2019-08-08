@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "costa-rico/yii2-images": "dev-master",
         "newerton/yii2-fancybox": "dev-master",
-        "carono/yii2-migrate": "^1.0"
+        "carono/yii2-migrate": "^1.0",
+        "svil1502/sring-helper-example": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
